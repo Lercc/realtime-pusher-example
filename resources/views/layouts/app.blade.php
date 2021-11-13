@@ -81,6 +81,8 @@
             </div>
         </nav>
 
+        <order-alert user_id="{{ Auth()->user()->id }}"></order-alert>
+
         <main class="py-4">
             @yield('content')
         </main>

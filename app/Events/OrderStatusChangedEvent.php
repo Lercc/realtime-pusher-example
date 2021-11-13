@@ -35,8 +35,12 @@ class OrderStatusChangedEvent implements ShouldBroadcast
     public function broadcastOn()
     {
         // return new PrivateChannel('channel-name');
-        return new Channel('pizza-tracker.'.$this->order->id);
         // return new Channel('pizza-tracker');
+        // return new Channel('pizza-tracker.'.$this->order->id);
+        return [
+            'pizza-tracker.' . $this->order->id,
+            'pizza-tracker'
+        ];
     }
 
     public function broadcastWith()
