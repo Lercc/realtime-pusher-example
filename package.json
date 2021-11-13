@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "vue": "^2.6.11",
-        "vue-strap": "github:wffranco/vue-strap"
+        "vue-strap": "github:wffranco/vue-strap",
+        "vue-timeago": "^5.1.3"
     }
 }
