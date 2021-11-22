@@ -67500,9 +67500,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.Pusher = __webpack_require__(/*! pusher-js */ "./node_modules/pusher-js/dist/web/pusher.js");
 window.Echo = new laravel_echo__WEBPACK_IMPORTED_MODULE_0__["default"]({
   broadcaster: 'pusher',
-  key: "49b39302c42bc0a7c70a",
-  cluster: "us2",
-  forceTLS: true
+  key: "public-key-456",
+  // cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+  wsHost: '192.168.1.35',
+  wsPort: 6001,
+  // encrypted: false,
+  forceTLS: false,
+  disableStats: true
 });
 
 /***/ }),
