@@ -47,6 +47,8 @@ class OrderStatusChangedEvent implements ShouldBroadcast
     {
         $this->order->status_name = $this->order->status->name;
         $this->order->status_percent = $this->order->status->percent;
+
+        \Log::debug("{$this->order}");      //
         return $this->order->toArray();
     }
 }
